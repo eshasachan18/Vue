@@ -1,8 +1,10 @@
 <template>
-    <div :key="user.id" :v-for="user in users">
+<div>
+    <div :key="user.id" v-for="user in users">
    
-    <User :user="user"/>
+    <User @delete-user="$emit('delete-user', user.id)" :user="user"/>
      </div >
+     </div>
 </template>
 <script>
 import User from "./user.vue"
@@ -14,6 +16,7 @@ export default {
     },
     components: {
         User
-    }
+    },
+    emits:['delete-user']
 }
 </script>

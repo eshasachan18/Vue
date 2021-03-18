@@ -1,11 +1,11 @@
 <template>
     <header>
-       <h1> DATA RETRIEVAL SYSTEM</h1>
+    <h1>TASK MANAGEMENT</h1>
        <Button text="Add User" color="green"/>
     </header>
 </template>
 <script>
-import Button from "./button"
+import Button from "./button.vue"
 export default {
     name: "Header",
     props: {
